@@ -1,15 +1,21 @@
 import { data } from '../data/images.data.js';
 
-let position = 0;
+let position = -1;
+let url: string;
+const validIncrement = (position >= -1) && (position <= data.length - 1);
 
 export const next = () => {
-  const url = data[position];
-  position += 1;
-  return url;
+  if (position >= -1 && position < data.length-1) {
+    position += 1;
+    url = data[position];
+    return url;
+  }
 }
 
 export const back = () => {
-  position -= 1;
-  const url = data[position];
-  return url;
+  if(position > 0){
+    position = position - 1;
+    url = data[position];
+    return url;
+  }
 }

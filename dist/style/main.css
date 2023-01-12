@@ -1,0 +1,264 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+.main_container-msg .message_final {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.main_title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: darkblue;
+  box-shadow: 1px 1px 1px 1px #cccccc;
+  padding-left: 0.2rem;
+}
+.main_btnInit {
+  background-color: var(--background-button-darkblue);
+  padding: 0.8rem 1.2rem;
+  border: transparent;
+  border-radius: 5px;
+  color: greenyellow;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.main_btnInit:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  color: fuchsia;
+}
+
+.main_response {
+  display: flex;
+  justify-content:start;
+  list-style:circle;
+  padding-left: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.response_correct {
+  color: mediumspringgreen;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+.response_incorrect {
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* Sección de preguntas */
+.main_question {
+  padding: 1rem;
+  border-radius: 10px;
+  background: aliceblue;
+  margin-bottom: 1rem;
+}
+.question_description {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: darkmagenta;
+  margin-bottom: 1rem;
+}
+.question_options {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.question_options .options {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: rebeccapurple;
+  cursor: pointer;
+}
+
+/* Indicación visual de opción seleccionada */
+.selected.option-a {
+  background-color:khaki;
+}
+.selected.option-b {
+  background-color:khaki;
+}
+.selected.option-c {
+  background-color:khaki;
+}
+.selected.option-d {
+  background-color:khaki;
+}
+
+/* Indicación para respuesta correcta */
+.correct.option-a {
+  background-color: mediumspringgreen;
+}
+.correct.option-b {
+  background-color: mediumspringgreen;
+}
+.correct.option-c {
+  background-color: mediumspringgreen;
+}
+.correct.option-d {
+  background-color: mediumspringgreen;
+}
+
+/* Indicación para respuesta incorrecta */
+.incorrect.option-a {
+  background-color:red;
+}
+.incorrect.option-b {
+  background-color:red;
+}
+.incorrect.option-c {
+  background-color:red;
+}
+.incorrect.option-d {
+  background-color:red;
+}
+
+.main_btnEnter, .main_btnNext {
+  background-color: tomato;
+  padding: 0.8rem 1.2rem;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+.content_disabled--confirm .main_btnEnter {
+  background-color:darksalmon;
+}
+.content_disabled--next .main_btnNext {
+  background-color:darksalmon;
+}
+
+/* Sección de resultados */
+.main_results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 1rem;
+  border-radius: 10px;
+  background: blueviolet;
+  height: 10rem;
+}
+.results_title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.main_results > p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: yellow;
+}
+
+
+/* Table */
+@media screen and (min-width: 768px) {
+  .main_container {
+    padding-top: 2rem;
+  }
+  .main_title {
+    font-size: 2.6rem;
+  }
+
+  .response_correct, .response_incorrect{
+    font-size: 1.4rem;
+  }
+
+  .question_description {
+    font-size: 2rem;
+  }
+  .question_options .options {
+    font-size: 1.8rem;
+  }
+
+  .main_btnEnter, .main_btnNext {
+    padding: 1rem 1.4rem;
+  }
+  .main_results {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main_results > p {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .main_container {
+    padding-top: 3rem;
+  }
+  .main_container-msg .message_final {
+    font-size: 3rem;
+  }
+  .main_title {
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .main_btnInit {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .response_correct, .response_incorrect{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    margin-right: 3rem;
+  }
+
+  .main_question {
+    margin-bottom: 2rem;
+  }
+  .question_description {
+    font-size: 2.2rem;
+  }
+  .question_options .options {
+    font-size: 2rem;
+  }
+
+  .main_btnEnter, .main_btnNext {
+    font-size: 1.4rem;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .main_results {
+    border-radius: 15px;
+    height: 12rem;
+  }
+  .main_results > p {
+    font-size: 2.4rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

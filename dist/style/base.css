@@ -1,0 +1,37 @@
+:root {
+  /* --theme-background-gray: #F5F5F5;
+  --theme-background-lightblue: #EAF2FD;
+  --theme-background-pretobranco: #FFFFFF; */
+
+  --background-button-darkblue: #2A7AE4;
+  /* --background-bottom-lightblue: #add8e6;
+  --background-search-gray: #F5F5F5;
+
+  --text-color-darkblue: #2A7AE4;
+  --text-color-white: #FFFFFF;
+  --text-color-placeholder: #A2A2A2;
+  --text-color-descripcion: #464646; */
+
+}
+html {
+  font-size: 62.5%;
+}
+
+/* body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+} */
+
+a {
+  text-decoration: none;
+}
+.container_base {
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+@media screen and (min-width: 1130px) {
+  .container_base {
+      padding-left: calc((100% - 1130px)/2);
+      padding-right: calc((100% - 1130px)/2);
+  }
+}
